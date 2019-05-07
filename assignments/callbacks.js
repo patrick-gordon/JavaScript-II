@@ -2,6 +2,16 @@
 
 const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
+function firstItem(array, callback){
+  callback(array[0])
+}
+
+firstItem(items, function(first){
+  console.log(first)
+})
+
+
+
 /* 
 
   //Given this problem: 
@@ -26,25 +36,59 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 
 function getLength(arr, cb) {
+  cb(arr.length)
   // getLength passes the length of the array into the callback.
 }
+getLength(items, function(whatever){
+  console.log(whatever)
+})
 
 function last(arr, cb) {
+  cb(items[arr.length - 1])
   // last passes the last item of the array into the callback.
 }
+last(items, function(lastItem){
+  console.log(lastItem)
+})
 
 function sumNums(x, y, cb) {
+  cb(x + y)
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
+sumNums(2,2, function(adds){
+  console.log(adds)
+})
 
 function multiplyNums(x, y, cb) {
+  cb(x * y)
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
+multiplyNums(2,2, function(multiply){
+  console.log(multiply)
+})
 
 function contains(item, list, cb) {
+  cb(list.includes(item))
+  }
+  contains('Gum',items, function(result){
+    console.log(result)
+  } ) 
+  
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* STRETCH PROBLEM */
 
